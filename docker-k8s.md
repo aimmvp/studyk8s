@@ -46,5 +46,22 @@ $ docker container run -d -p 9000:8080 example/echo:latest
 
 5. stop docker container
 ```
-docker stop $(docker container ls --filter "ancestor=example/echo" -q)
+$ docker stop $(docker container ls --filter "ancestor=example/echo" -q)
+```
+
+6. 기타 명령어
+```
+$ docker container ls                         # docker container 목록 조회
+$ docker container ls -q                      # container id 만 조회
+$ docker container ls --filter "ancestor=example/echo"  # filter 적용
+$ docker stop $(docker container ls --filter "ancestor=example/echo" -q)
+$ docker container restart echo
+$ docker container rm $(docker container ls --filter "ancestor=example/echo" -q) # remove container
+$ docker container logs -f $(docker container ls --filter "ancestor=example/echo" -q) # view log
+$ docker container exec -it echo sh
+$ docker container cp echo:/echo/main.go .    # docker container file copy
+$ docker container prune                      # remove all stopped containers
+$ docker image prune                          # remove all dangling images
+$ docker system prune                         # remove all stopped containers, all networks not used, all dangling images, all build cache
+$ docker container stats
 ```
