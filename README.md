@@ -1,4 +1,4 @@
-[ Study kubernetes with Google Cloud Platform]
+[Study kubernetes with Google Cloud Platform](https://cloud.google.com/sdk/downloads)
 
 0. GCP에 프로젝트와 Cluster 생성
   - cloud.google.com 접속
